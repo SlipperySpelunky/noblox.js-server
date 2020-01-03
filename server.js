@@ -5,6 +5,11 @@ var crypto = require('crypto')
 var validator = require('validator')
 var bodyParser = require('body-parser')
 var Promise = require('bluebird')
+var http = require('http');
+
+setInterval(function() {
+    http.get("http://bhranksystem.herokuapp.com");
+}, 30000
 
 var app = express()
 var port = process.env.PORT || 8080
